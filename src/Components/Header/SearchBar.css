@@ -1,0 +1,121 @@
+.search-bar-wrapper {
+  position: relative;
+  flex: 1;
+  max-width: 480px;
+}
+
+.search-pill-form {
+  display: flex;
+  align-items: center;
+  background-color: var(--brand-lilac-soft, #f5f0ff);
+  border: 1px solid rgba(155, 126, 222, 0.25);
+  border-radius: 9999px;
+  padding: 7px 16px;
+  transition: all 0.25s ease;
+}
+
+.search-pill-form:hover {
+  background-color: #efe7ff;
+  border-color: rgba(155, 126, 222, 0.45);
+}
+
+.search-pill-form.focused {
+  background-color: #ffffff;
+  border-color: var(--brand-lilac, #9b7ede);
+  box-shadow: 0 4px 16px rgba(155, 126, 222, 0.2);
+}
+
+.search-submit-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.search-input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13.5px;
+  color: var(--brand-text-dark, #2d2638);
+}
+
+.search-input::placeholder {
+  color: var(--brand-text-muted, #6e657a);
+  font-weight: 400;
+}
+
+.search-clear-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.15s ease;
+}
+
+.search-clear-btn:hover {
+  background-color: rgba(155, 126, 222, 0.15);
+}
+
+.search-suggestions-popover {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border: 1px solid rgba(155, 126, 222, 0.22);
+  border-radius: 14px;
+  box-shadow: 0 12px 32px rgba(45, 38, 56, 0.12);
+  z-index: 1000;
+  padding: 14px;
+  animation: fadeInDown 0.2s ease-out;
+}
+
+.suggestions-section-title {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  color: var(--brand-lilac, #9b7ede);
+  margin-bottom: 8px;
+  padding-left: 6px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.suggestions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.suggestion-item-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--brand-text-dark, #2d2638);
+  font-family: 'Montserrat', sans-serif;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.suggestion-item-btn:hover {
+  background-color: var(--brand-lilac-soft, #f5f0ff);
+  color: #7c5cc4;
+}

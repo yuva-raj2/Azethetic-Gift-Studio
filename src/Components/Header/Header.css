@@ -1,0 +1,10 @@
+.site-header-wrapper {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--brand-bg, #ffffff);
+  border-bottom: 1px solid rgba(155, 126, 222, 0.16);
+  box-shadow: 0 4px 16px rgba(45, 38, 56, 0.05);
+  transition: box-shadow 0.25s ease;
+}

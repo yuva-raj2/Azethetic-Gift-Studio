@@ -1,38 +1,106 @@
+/* Brand Theme Variables — Aztheticlyf | Aesthetic Gift Studio */
+:root {
+  --brand-lilac: #9b7ede;
+  --brand-lilac-soft: #f5f0ff;
+  --brand-blush: #f7c5d8;
+  --brand-mint: #c9ece1;
+  --brand-text-dark: #2d2638;
+  --brand-text-muted: #6e657a;
+  --brand-bg: #ffffff;
+  --brand-surface: #fdfbff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: var(--brand-bg);
+  color: var(--brand-text-dark);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.App-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+}
+
+/* Pastel Aesthetic Category Toast */
+.category-selected-toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: linear-gradient(135deg, #2d2638 0%, #443757 100%);
+  color: #ffffff;
+  padding: 12px 18px;
+  border-radius: 50px;
+  border: 1px solid rgba(155, 126, 222, 0.35);
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 12px;
+  box-shadow: 0 12px 28px rgba(45, 38, 56, 0.22);
+  z-index: 999;
+  font-size: 13px;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.02em;
+  animation: slideUpToast 0.25s ease-out;
 }
 
-.App-link {
-  color: #61dafb;
+.category-selected-toast strong {
+  color: #f7c5d8;
+  font-weight: 600;
 }
 
-@keyframes App-logo-spin {
+@keyframes slideUpToast {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(16px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.category-selected-toast button {
+  background: rgba(255, 255, 255, 0.12);
+  border: none;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  color: #e5ddf2;
+  cursor: pointer;
+  font-size: 11px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.category-selected-toast button:hover {
+  background: var(--brand-lilac);
+  color: #ffffff;
+}
+
+/* Responsive adjustment for mobile screens */
+@media (max-width: 600px) {
+  .category-selected-toast {
+    bottom: 16px;
+    right: 16px;
+    left: 16px;
+    justify-content: space-between;
   }
 }
