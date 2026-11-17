@@ -1,0 +1,152 @@
+.wedding-gifting-section {
+  width: 100%;
+  padding: 24px 0 64px;
+  background-color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.wedding-split-banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  min-height: 460px;
+  background: linear-gradient(135deg, #fbf8ff 0%, #fff6f9 100%);
+  border-top: 1px solid rgba(155, 126, 222, 0.16);
+  border-bottom: 1px solid rgba(155, 126, 222, 0.16);
+  overflow: hidden;
+}
+
+/* Left Image Column */
+.wedding-image-col {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  overflow: hidden;
+  background-color: #f5f0ff;
+}
+
+.wedding-feature-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.wedding-split-banner:hover .wedding-feature-img {
+  transform: scale(1.03);
+}
+
+/* Right Content Column */
+.wedding-content-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 56px 64px;
+}
+
+.wedding-content-inner {
+  max-width: 480px;
+}
+
+.wedding-eyebrow {
+  display: inline-block;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #8a6bc9;
+  background-color: #f5f0ff;
+  border: 1px solid rgba(155, 126, 222, 0.25);
+  padding: 5px 13px;
+  border-radius: 9999px;
+  margin-bottom: 16px;
+}
+
+.wedding-content-inner h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 44px;
+  font-weight: 700;
+  color: #2d2638;
+  line-height: 1.15;
+  margin: 0 0 18px 0;
+  letter-spacing: -0.4px;
+}
+
+.wedding-content-inner p {
+  font-size: 14.5px;
+  color: #5c5368;
+  line-height: 1.75;
+  margin: 0 0 30px 0;
+}
+
+.wedding-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.wedding-primary-btn {
+  background-color: #2d2638;
+  color: #ffffff;
+  border: none;
+  padding: 14px 36px;
+  border-radius: 9999px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.wedding-primary-btn:hover {
+  background: linear-gradient(135deg, #9b7ede 0%, #e08eb5 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(155, 126, 222, 0.3);
+}
+
+.wedding-secondary-btn {
+  background-color: transparent;
+  color: #2d2638;
+  border: 1.5px solid rgba(45, 38, 56, 0.28);
+  padding: 12.5px 26px;
+  border-radius: 9999px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.wedding-secondary-btn:hover {
+  border-color: #9b7ede;
+  background-color: #f5f0ff;
+  color: #7c5cc4;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 960px) {
+  .wedding-split-banner {
+    grid-template-columns: 1fr;
+  }
+
+  .wedding-image-col {
+    min-height: 300px;
+    max-height: 380px;
+  }
+
+  .wedding-content-col {
+    padding: 40px 24px 48px;
+    text-align: center;
+  }
+
+  .wedding-content-inner h2 {
+    font-size: 34px;
+  }
+
+  .wedding-cta-group {
+    justify-content: center;
+  }
+}

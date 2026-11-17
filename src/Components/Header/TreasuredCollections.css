@@ -1,0 +1,196 @@
+.treasured-collections-section {
+  padding: 56px 24px 72px;
+  background-color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.treasured-container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.treasured-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 36px;
+}
+
+.treasured-eyebrow {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #8a6bc9;
+  background-color: #f5f0ff;
+  border: 1px solid rgba(155, 126, 222, 0.25);
+  padding: 5px 14px;
+  border-radius: 9999px;
+  margin-bottom: 12px;
+}
+
+.treasured-header h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 36px;
+  font-weight: 600;
+  color: #2d2638;
+  margin: 0 0 10px 0;
+}
+
+.treasured-header p {
+  font-size: 14px;
+  color: #6e657a;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* 6-Column Grid: 3 equal cards on Row 1, 2 centered equal cards on Row 2 */
+.image-cards-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 24px;
+  width: 100%;
+  margin: 8px auto;
+}
+
+.image-cards {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 18px;
+  border-radius: 18px;
+  background-color: #f5f0ff;
+  border: 1px solid rgba(155, 126, 222, 0.25);
+  box-shadow: 0 8px 24px rgba(45, 38, 56, 0.06);
+  cursor: pointer;
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+/* Center cards 4 and 5 cleanly beneath the top 3 */
+.image-cards:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.image-cards:nth-child(5) {
+  grid-column: 4 / span 2;
+}
+
+.image-cards:hover {
+  transform: translateY(-5px);
+  border-color: #9b7ede;
+  box-shadow: 0 16px 36px rgba(155, 126, 222, 0.2);
+}
+
+.treasured-img-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.image-picuture-variance {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s ease;
+}
+
+.image-cards:hover .image-picuture-variance {
+  transform: scale(1.04);
+}
+
+.treasured-card-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(4px);
+  color: #7c5cc4;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 9999px;
+  box-shadow: 0 2px 8px rgba(45, 38, 56, 0.1);
+}
+
+.treasured-card-overlay {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.treasured-card-content {
+  text-align: center;
+  padding: 4px 8px 6px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.treasured-card-content h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #2d2638;
+  margin: 0 0 6px 0;
+}
+
+.treasured-card-content p {
+  font-size: 13px;
+  color: #6e657a;
+  line-height: 1.5;
+  margin: 0 0 16px 0;
+}
+
+.treasured-explore-pill {
+  display: inline-block;
+  align-self: center;
+  background: linear-gradient(135deg, #2d2638 0%, #4a3b63 100%);
+  color: #ffffff;
+  padding: 9px 20px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.image-cards:hover .treasured-explore-pill {
+  background: linear-gradient(135deg, #9b7ede 0%, #e08eb5 100%);
+}
+
+/* Tablet: 2-column grid */
+@media (max-width: 1024px) {
+  .image-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .image-cards,
+  .image-cards:nth-child(4),
+  .image-cards:nth-child(5) {
+    grid-column: span 1;
+  }
+}
+
+/* Mobile: Single column stack */
+@media (max-width: 600px) {
+  .treasured-collections-section {
+    padding: 40px 16px 56px;
+  }
+
+  .treasured-header h2 {
+    font-size: 28px;
+  }
+
+  .image-cards-container {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}

@@ -1,0 +1,123 @@
+.bulk-order-section {
+  width: 100%;
+  padding: 24px 0 64px;
+  background-color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.bulk-split-banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  min-height: 460px;
+  background: linear-gradient(135deg, #f8f4ff 0%, #fff7fa 100%);
+  border-top: 1px solid rgba(155, 126, 222, 0.16);
+  border-bottom: 1px solid rgba(155, 126, 222, 0.16);
+  overflow: hidden;
+}
+
+/* Left Image Column */
+.bulk-image-col {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  overflow: hidden;
+  background-color: #f5f0ff;
+}
+
+.bulk-feature-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.bulk-split-banner:hover .bulk-feature-img {
+  transform: scale(1.03);
+}
+
+/* Right Content Column */
+.bulk-content-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 56px 64px;
+}
+
+.bulk-content-inner {
+  max-width: 440px;
+  width: 100%;
+}
+
+.bulk-eyebrow {
+  display: inline-block;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #8a6bc9;
+  background-color: #f5f0ff;
+  border: 1px solid rgba(155, 126, 222, 0.25);
+  padding: 5px 13px;
+  border-radius: 9999px;
+  margin-bottom: 18px;
+}
+
+.bulk-content-inner h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 46px;
+  font-weight: 700;
+  color: #2d2638;
+  line-height: 1.14;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.4px;
+}
+
+.bulk-content-inner p {
+  font-size: 15px;
+  font-weight: 500;
+  color: #5c5368;
+  margin: 0 0 28px 0;
+}
+
+.bulk-enquire-btn {
+  background-color: #2d2638;
+  color: #ffffff;
+  border: none;
+  padding: 14px 38px;
+  border-radius: 9999px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.bulk-enquire-btn:hover {
+  background: linear-gradient(135deg, #9b7ede 0%, #e08eb5 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(155, 126, 222, 0.3);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 960px) {
+  .bulk-split-banner {
+    grid-template-columns: 1fr;
+  }
+
+  .bulk-image-col {
+    min-height: 300px;
+    max-height: 380px;
+  }
+
+  .bulk-content-col {
+    padding: 40px 24px 48px;
+    text-align: center;
+  }
+
+  .bulk-content-inner h2 {
+    font-size: 36px;
+  }
+}

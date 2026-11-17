@@ -5,7 +5,12 @@ import HeroBanner from './Components/Hero/HeroBanner';
 import BulkEnquiryModal from './Components/Modals/BulkEnquiryModal';
 import CartDrawer from './Components/Modals/CartDrawer';
 import CuratedGifts from './Components/Common/CuratedGifts';
-
+import TreasuredCollections from './Components/Header/TreasuredCollections';
+import BestSeller from './Components/Header/BetterSeller';
+import Wedding from './Components/Header/Wedding';
+import BulkOrder from './Components/Header/BulkOrder';
+import InstagramFeed from './Components/Header/InstagramFeed';
+import Footer from './Components/Header/Footer';
 function App() {
   const [isBulkModalOpen, setIsBulkModalOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -101,6 +106,12 @@ function App() {
         cartItems={cartItems}
         onRemoveItem={handleRemoveFromCart}
       />
+      <TreasuredCollections/>
+      <BestSeller onAddToCart={handleAddToCart} onViewAll={handleCategorySelect} />
+      <Wedding onAddToCart={handleAddToCart} onViewAll={handleCategorySelect} />
+      <BulkOrder onOpenBulkModal={() => setIsBulkModalOpen(true)} />
+        <InstagramFeed />
+        <Footer/>
     </div>
   );
 }
