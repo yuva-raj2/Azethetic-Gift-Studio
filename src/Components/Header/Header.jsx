@@ -3,7 +3,6 @@ import './Header.css';
 import TopBar from './TopBar';
 import Navbar from './Navbar';
 import CategoryNav from './CategoryNav';
-import TreasuredCollections from './TreasuredCollections';
 export default function Header({
   onOpenBulkEnquiry,
   onOpenCart,
